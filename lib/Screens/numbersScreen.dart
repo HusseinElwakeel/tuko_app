@@ -31,19 +31,10 @@ class Numbers extends StatelessWidget {
       ),
       body:
         ListView(
-          children: [
-            item(number: numbers[0]),
-            item(number: numbers[1]),
-            item(number: numbers[2]),
-            item(number: numbers[3]),
-            item(number: numbers[4]),
-            item(number: numbers[5]),
-            item(number: numbers[6]),
-            item(number: numbers[7]),
-            item(number: numbers[8]),
-            item(number: numbers[9]),
+          children:
+          getList(numbers),
 
-          ],
+
         )
 
 
@@ -51,9 +42,14 @@ class Numbers extends StatelessWidget {
 
     );
   }
+  // list return list of item and (it's input)
+ List<item> getList (List<Number> numbers ){
+    List<item> listItem =[];
+    for ( int i =0;i< numbers.length;i++ ){
+      listItem.add(item(number: numbers[i]));
+    }
+    return listItem;
+ }
 }
-//write  class + name of the class {
-// البيانات الى بتمثل ال class ده
-// }
 
 

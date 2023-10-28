@@ -1,4 +1,9 @@
 
+
+//write  class + name of the class {
+// البيانات الى بتمثل ال class ده
+// }
+
 class Number{
   final String image;
   final String enNumber;
