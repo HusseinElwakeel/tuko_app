@@ -30,26 +30,22 @@ class Numbers extends StatelessWidget {
         title: Text("Numbers"),
       ),
       body:
-        ListView(
-          children:
-          getList(numbers),
 
-
+          // ListView.builder = forloop
+        ListView.builder(
+          // length of the list of item
+          itemCount: numbers.length,
+          // it's the item what want to build
+          itemBuilder: (context, index) => item(number: numbers[index]),
         )
-
-
-
 
     );
   }
   // list return list of item and (it's input)
- List<item> getList (List<Number> numbers ){
-    List<item> listItem =[];
-    for ( int i =0;i< numbers.length;i++ ){
-      listItem.add(item(number: numbers[i]));
-    }
-    return listItem;
- }
+
+
+
+
 }
 
 
